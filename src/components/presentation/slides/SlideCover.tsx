@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import coffeeHero from "@/assets/coffee-hero.jpg";
 
@@ -65,14 +66,24 @@ const SlideCover = () => {
         </div>
       </div>
 
-      {/* Bottom decorative element */}
+      {/* Bottom Name Section - Prominent & Aesthetic */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.8 }}
-        className="absolute bottom-20 md:bottom-12 right-4 md:right-12 text-primary-foreground/30 text-xs md:text-sm font-body"
+        className="absolute bottom-8 md:bottom-12 left-4 sm:left-6 md:left-12 lg:left-24"
       >
-        Prepared by Michael Olusoji
+        <div className="flex items-center gap-3 md:gap-4">
+          <div className="h-12 md:h-16 w-0.5 bg-primary-foreground/30" />
+          <div>
+            <p className="text-primary-foreground/50 text-xs md:text-sm font-body uppercase tracking-wider mb-1">
+              Prepared by
+            </p>
+            <p className="text-primary-foreground font-heading text-lg md:text-2xl font-semibold">
+              Michael Olusoji
+            </p>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
