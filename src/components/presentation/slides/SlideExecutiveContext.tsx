@@ -4,13 +4,13 @@ import IconBox from "../IconBox";
 
 const SlideExecutiveContext = () => {
   return (
-    <div className="slide-container bg-balance-neutral-100">
+    <div className="slide-container bg-muted">
       <div className="slide-content">
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-balance-neutral-400 font-body text-sm uppercase tracking-widest mb-4"
+          className="text-muted-foreground font-body text-xs md:text-sm uppercase tracking-widest mb-3 md:mb-4"
         >
           Executive Context
         </motion.p>
@@ -23,17 +23,17 @@ const SlideExecutiveContext = () => {
         >
           Why Email & SMS Matter
           <br />
-          <span className="text-balance-neutral-400">for Balance Coffee</span>
+          <span className="text-muted-foreground">for Balance Coffee</span>
         </motion.h1>
 
         <motion.div
           initial={{ opacity: 0, scaleX: 0 }}
           animate={{ opacity: 1, scaleX: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="w-24 h-0.5 bg-balance-green mb-16 origin-left"
+          className="w-16 md:w-24 h-0.5 bg-primary mb-10 md:mb-16 origin-left"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 max-w-4xl">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-16 max-w-4xl">
           <IconBox
             icon={RefreshCw}
             title="Habit-Driven Category"

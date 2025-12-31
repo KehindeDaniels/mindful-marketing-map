@@ -9,7 +9,7 @@ const SlideWhatsWorking = () => {
         <img
           src={coffeeWellness}
           alt="Wellness coffee moment"
-          className="w-full h-full object-cover opacity-60"
+          className="w-full h-full object-cover opacity-60 dark:opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
       </div>
@@ -19,7 +19,7 @@ const SlideWhatsWorking = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-balance-green font-body text-sm uppercase tracking-widest mb-4"
+          className="text-primary font-body text-xs md:text-sm uppercase tracking-widest mb-3 md:mb-4"
         >
           Strengths Identified
         </motion.p>
@@ -32,17 +32,17 @@ const SlideWhatsWorking = () => {
         >
           Strong Foundations
           <br />
-          <span className="text-balance-neutral-400">Already in Place</span>
+          <span className="text-muted-foreground">Already in Place</span>
         </motion.h1>
 
         <motion.div
           initial={{ opacity: 0, scaleX: 0 }}
           animate={{ opacity: 1, scaleX: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="w-24 h-0.5 bg-balance-green mb-12 origin-left"
+          className="w-16 md:w-24 h-0.5 bg-primary mb-8 md:mb-12 origin-left"
         />
 
-        <div className="max-w-xl space-y-2">
+        <div className="max-w-xl space-y-1 md:space-y-2">
           <BulletPoint delay={0} variant="positive">
             Clear clean-coffee positioning with science-backed claims
           </BulletPoint>

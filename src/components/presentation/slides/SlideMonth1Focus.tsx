@@ -36,7 +36,7 @@ const SlideMonth1Focus = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-balance-neutral-400 font-body text-sm uppercase tracking-widest mb-4"
+          className="text-muted-foreground font-body text-xs md:text-sm uppercase tracking-widest mb-3 md:mb-4"
         >
           Strategic Focus
         </motion.p>
@@ -49,14 +49,14 @@ const SlideMonth1Focus = () => {
         >
           First Month:
           <br />
-          <span className="text-balance-neutral-400">Build the Revenue Foundation</span>
+          <span className="text-muted-foreground">Build the Revenue Foundation</span>
         </motion.h1>
 
         <motion.div
           initial={{ opacity: 0, scaleX: 0 }}
           animate={{ opacity: 1, scaleX: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="w-24 h-0.5 bg-balance-green mb-16 origin-left"
+          className="w-16 md:w-24 h-0.5 bg-primary mb-10 md:mb-16 origin-left"
         />
 
         {/* Timeline */}
@@ -66,10 +66,10 @@ const SlideMonth1Focus = () => {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="absolute top-7 left-7 right-7 h-0.5 bg-balance-green-light origin-left hidden md:block"
+            className="absolute top-5 md:top-7 left-5 md:left-7 right-5 md:right-7 h-0.5 bg-secondary origin-left hidden md:block"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {phases.map((phase, index) => (
               <motion.div
                 key={phase.title}
@@ -78,16 +78,16 @@ const SlideMonth1Focus = () => {
                 transition={{ delay: 0.4 + index * 0.15, duration: 0.5 }}
                 className="relative"
               >
-                <div className="icon-container mb-5 relative z-10">
+                <div className="icon-container mb-3 md:mb-5 relative z-10">
                   <phase.icon />
                 </div>
-                <span className="text-xs font-body text-balance-green uppercase tracking-widest mb-2 block">
+                <span className="text-[10px] md:text-xs font-body text-primary uppercase tracking-widest mb-1 md:mb-2 block">
                   {phase.week}
                 </span>
-                <h3 className="text-lg font-heading font-medium text-balance-neutral-600 mb-1">
+                <h3 className="text-sm md:text-lg font-heading font-medium text-foreground mb-0.5 md:mb-1">
                   {phase.title}
                 </h3>
-                <p className="text-balance-neutral-400 font-light text-sm">
+                <p className="text-muted-foreground font-light text-xs md:text-sm">
                   {phase.description}
                 </p>
               </motion.div>
