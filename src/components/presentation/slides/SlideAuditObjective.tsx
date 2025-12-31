@@ -10,7 +10,7 @@ const SlideAuditObjective = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-balance-neutral-400 font-body text-sm uppercase tracking-widest mb-4"
+          className="text-muted-foreground font-body text-xs md:text-sm uppercase tracking-widest mb-3 md:mb-4"
         >
           Audit Scope
         </motion.p>
@@ -23,17 +23,17 @@ const SlideAuditObjective = () => {
         >
           What Was Reviewed
           <br />
-          <span className="text-balance-neutral-400">Before Scaling</span>
+          <span className="text-muted-foreground">Before Scaling</span>
         </motion.h1>
 
         <motion.div
           initial={{ opacity: 0, scaleX: 0 }}
           animate={{ opacity: 1, scaleX: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="w-24 h-0.5 bg-balance-green mb-16 origin-left"
+          className="w-16 md:w-24 h-0.5 bg-primary mb-10 md:mb-16 origin-left"
         />
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 max-w-5xl">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12 max-w-5xl">
           <IconBox
             icon={Settings}
             title="Technical & Data"

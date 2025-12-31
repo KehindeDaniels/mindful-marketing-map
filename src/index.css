@@ -105,6 +105,25 @@
     --border: 140 5% 20%;
     --input: 140 5% 20%;
     --ring: 152 26% 45%;
+
+    /* Dark mode brand tokens */
+    --balance-green: 152 26% 45%;
+    --balance-green-light: 140 10% 20%;
+    --balance-neutral-100: 140 2% 12%;
+    --balance-neutral-200: 140 5% 18%;
+    --balance-neutral-300: 140 5% 25%;
+    --balance-neutral-400: 132 6% 50%;
+    --balance-neutral-500: 132 6% 65%;
+    --balance-neutral-600: 0 0% 90%;
+
+    --sidebar-background: 140 2% 10%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 0 0% 96%;
+    --sidebar-primary-foreground: 140 2% 10%;
+    --sidebar-accent: 140 5% 15%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 140 5% 20%;
+    --sidebar-ring: 152 26% 45%;
   }
 }
 
@@ -142,44 +161,44 @@
   }
   
   .slide-container {
-    @apply relative w-full h-screen overflow-hidden;
+    @apply relative w-full min-h-screen overflow-hidden;
   }
   
   .slide-content {
-    @apply max-w-6xl mx-auto px-8 md:px-16 lg:px-24 py-16 h-full flex flex-col justify-center;
+    @apply max-w-6xl mx-auto px-4 sm:px-6 md:px-12 lg:px-24 py-8 pb-24 md:py-16 md:pb-28 min-h-screen flex flex-col justify-center;
   }
   
   .icon-container {
-    @apply w-14 h-14 rounded-2xl flex items-center justify-center;
+    @apply w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center;
     background: hsl(var(--balance-green-light));
   }
   
   .icon-container svg {
-    @apply w-7 h-7;
+    @apply w-5 h-5 md:w-7 md:h-7;
     color: hsl(var(--balance-green));
   }
   
   .slide-title {
-    @apply text-4xl md:text-5xl lg:text-6xl font-heading font-semibold tracking-tight leading-tight mb-6;
+    @apply text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-heading font-semibold tracking-tight leading-tight mb-4 md:mb-6;
     color: hsl(var(--balance-green));
   }
   
   .slide-subtitle {
-    @apply text-lg md:text-xl font-light leading-relaxed max-w-2xl;
+    @apply text-base md:text-xl font-light leading-relaxed max-w-2xl;
     color: hsl(var(--balance-neutral-500));
   }
   
   .bullet-item {
-    @apply flex items-start gap-4 py-3;
+    @apply flex items-start gap-3 md:gap-4 py-2 md:py-3;
   }
   
   .bullet-dot {
-    @apply w-2 h-2 rounded-full mt-2.5 flex-shrink-0;
+    @apply w-1.5 h-1.5 md:w-2 md:h-2 rounded-full mt-2 md:mt-2.5 flex-shrink-0;
     background: hsl(var(--balance-green));
   }
   
   .bullet-text {
-    @apply text-lg md:text-xl font-light leading-relaxed;
+    @apply text-base md:text-xl font-light leading-relaxed;
     color: hsl(var(--balance-neutral-600));
   }
 }
